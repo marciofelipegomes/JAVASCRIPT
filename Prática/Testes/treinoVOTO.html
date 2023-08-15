@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino Voto</title>
+</head>
+<body>
+    <h1>Treino Voto</h1>
+    <p>Digite sua Idade:</p>
+    <input type="text" name="idade" id="idade">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var idade = document.getElementById('idade')
+            var res = document.getElementById('res')
+            var idade = Number(idade.value)
+
+            res.innerHTML=`<p>A sua idade é: <strong>${idade} anos.</strong></p>`
+            if (idade < 16){
+                res.innerHTML +=`<p>Você <strong>NÃO</strong> pode votar!</p>`
+            } else if (idade < 18 || idade > 65){
+                res.innerHTML +=`<p> <br> Seu voto é <strong>opcional!</strong></p>`
+            } else {
+                res.innerHTML += `<p><br>Voto <strong>obrigatório!</strong></p>`
+            }
+            
+
+        }
+    </script>
+</body>
+</html>

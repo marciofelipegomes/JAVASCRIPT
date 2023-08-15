@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino MIL Nacionalidade</title>
+</head>
+<body>
+    <h1>Treino Nacionalidade MIL</h1>
+    <p>Digite o nome do seu país</p>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function verificar(){
+            var p = document.getElementById('pais').value 
+            var res = document.getElementById('res')
+
+         if (p != 'Brasil' && p != 'brasil'){
+            res.innerHTML=`Você é estrangeiro`
+        } else {
+            res.innerHTML=`Você é brasileiro`
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste SOMA</title>
+</head>
+<body>
+    <h1>Somar Valores</h1>
+    <input type="text" name="txt1" id="txt1">
+    <input type="text" name="txt2" id="txt2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar(){
+            var tnt1 = document.getElementById('txt1')
+            var tnt2 = document.getElementById('txt2')
+            var res = document.getElementById('res')
+            n1 = Number(tnt1.value)
+            n2 = Number(tnt2.value)
+            s = n1 + n2
+            res.innerText=`A soma de ${n1} com ${n2} é igual a: ${s}`
+        }
+    </script>
+</body>
+</html>

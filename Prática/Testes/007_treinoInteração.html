@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste INTERAÇÃO</title>
+</head>
+<body>
+    <h1 id="i">Teste de Interação</h1>
+
+    <script>
+        
+        var i = document.getElementById('i')
+        i.addEventListener('click', clicar)
+        i.addEventListener('mouseenter', entrar)
+        i.addEventListener('mouseout', sair)
+
+        function clicar(){
+            i.innerText=`Eba! Você clicou! Obrigado! Agora tchau!`
+        }
+        function entrar(){
+            i.innerText=`Entrou! Agora clica, por favor!`
+        }
+        function sair (){
+            i.innerText=`Você tirou o mouse sem clicar, volta, por favor!`
+        }
+
+
+    </script>
+</body>
+</html>

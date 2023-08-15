@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação do Clique com o ADD</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+
+        div {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">Interação</div>
+
+    <script>
+        var area = document.getElementById('area')
+
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar(){
+            area.innerText='Opa! Clicou!'
+            area.style.background='green'
+        }
+        function entrar(){
+            area.innerText='O cursor entrou, eba! Agora clica, bb!'
+            area.style.background='blue'
+        }
+        function sair(){
+            area.innerText='O cursor saiu, hein! Traz de volta!'
+            area.style.background='red'
+        }
+    </script>
+</body>
+</html>
